@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+body {
+  @apply antialiased;
+}
+
+/* Loading spinner animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+/* Dashboard specific styles */
+.metric-card {
+  @apply bg-white rounded-lg shadow-md p-6 flex flex-col;
+}
+
+.chart-container {
+  @apply bg-white p-6 rounded-lg shadow-md;
+}
+
+/* Table styles */
+.data-table {
+  @apply min-w-full divide-y divide-gray-200;
+}
+
+.data-table th {
+  @apply px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider;
+}
+
+.data-table td {
+  @apply px-6 py-4 whitespace-nowrap text-sm text-gray-500;
+}
+
+.data-table tr {
+  @apply hover:bg-gray-50;
+}
+
+/* Monad theme colors */
+.bg-monad-primary {
+  @apply bg-monad-primary;
+}
+
+.bg-monad-secondary {
+  @apply bg-monad-secondary;
+}
+
+.text-monad-accent {
+  @apply text-monad-accent;
+}
