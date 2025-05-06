@@ -3,6 +3,7 @@ import { useLoaderData, Link } from "@remix-run/react";
 import { getRecentTransactions } from "~/lib/monad.server";
 import { useEffect, useState } from "react";
 import { ethers } from "ethers";
+import { useFarcaster } from "~/hooks/useFarcaster";
 
 interface Transaction {
   hash: string;
@@ -27,14 +28,8 @@ export default function Transactions() {
   const { transactions } = useLoaderData<typeof loader>();
   const [searchTerm, setSearchTerm] = useState("");
   
-  useEffect(() => {
-    try {
-      const sdk = require('@farcaster/frame-sdk');
-      sdk.actions.ready();
-    } catch (error) {
-      console.log('Farcaster SDK not available');
-    }
-  }, []);
+  // Use the Farcaster hook
+  useFarcaster();
   
   // Format the value for better display
   const formatEther = (wei: string) => {
@@ -86,14 +81,9 @@ export default function Transactions() {
             {filteredTransactions.map((tx) => (
               <tr key={tx.hash} className="hover:bg-gray-50">
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-500">
-                  <a 
-                    href={`https://testnet.monadexplorer.com/tx/${tx.hash}`} 
-                    target="_blank" 
-                    rel="noreferrer"
-                    className="hover:underline"
-                  >
+                  <Link to={`/transactions/${tx.hash}`}>
                     {tx.hash.substring(0, 10)}...
-                  </a>
+                  </Link>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                   <a 

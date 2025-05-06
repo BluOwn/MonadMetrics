@@ -2,7 +2,7 @@ import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import { getDashboardData } from "~/lib/metrics.server";
 import { Dashboard } from "~/components/Dashboard";
-import { useEffect } from "react";
+import { useFarcaster } from "~/hooks/useFarcaster";
 
 export const loader = async () => {
   try {
@@ -17,27 +17,8 @@ export const loader = async () => {
 export default function Index() {
   const dashboardData = useLoaderData<typeof loader>();
   
-  // Integrate with Farcaster Mini Apps SDK if available
-  useEffect(() => {
-    try {
-      const sdk = require('@farcaster/frame-sdk');
-      // Tell the Farcaster client that our app is ready to be displayed
-      sdk.actions.ready();
-      
-      // We could also add event listeners for SDK events
-      sdk.on('primaryButtonClicked', () => {
-        // Handle primary button click
-        console.log('Primary button clicked');
-      });
-      
-      return () => {
-        // Clean up event listeners when component unmounts
-        sdk.removeAllListeners();
-      };
-    } catch (error) {
-      console.log('Farcaster SDK not available');
-    }
-  }, []);
+  // Use the Farcaster hook
+  useFarcaster();
   
   return <Dashboard {...dashboardData} />;
 }

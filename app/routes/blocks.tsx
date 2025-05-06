@@ -3,6 +3,7 @@ import { useLoaderData, Link } from "@remix-run/react";
 import { getRecentBlocks } from "~/lib/monad.server";
 import { useEffect } from "react";
 import { ethers } from "ethers";
+import { useFarcaster } from "~/hooks/useFarcaster";
 
 interface Block {
   number: number;
@@ -26,14 +27,7 @@ export const loader = async () => {
 export default function Blocks() {
   const { blocks } = useLoaderData<typeof loader>();
   
-  useEffect(() => {
-    try {
-      const sdk = require('@farcaster/frame-sdk');
-      sdk.actions.ready();
-    } catch (error) {
-      console.log('Farcaster SDK not available');
-    }
-  }, []);
+  useFarcaster();
   
   return (
     <div className="min-h-screen bg-gray-100 p-6">
@@ -60,20 +54,15 @@ export default function Blocks() {
             {blocks.map((block) => (
               <tr key={block.hash} className="hover:bg-gray-50">
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-500">
-                  <a 
-                    href={`https://testnet.monadexplorer.com/block/${block.number}`} 
-                    target="_blank" 
-                    rel="noreferrer"
-                    className="hover:underline"
-                  >
+                  <Link to={`/blocks/${block.number}`}>
                     {block.number}
-                  </a>
+                  </Link>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                  {block.hash.substring(0, 10)}...{block.hash.substring(block.hash.length - 8)}
+                  {block.hash.substring(0, 10)}...
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                  {new Date(block.timestamp * 1000).toLocaleString()}
+                  {new Date(block.timestamp * 1000).toISOString().replace('T', ' ').slice(0, 19)}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                   {block.transactions.length}

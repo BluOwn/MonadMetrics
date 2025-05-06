@@ -9,6 +9,7 @@
         "typecheck": "tsc"
     },
     "dependencies": {
+        "@farcaster/frame-sdk": "^0.0.37",
         "@remix-run/css-bundle": "^2.5.1",
         "@remix-run/node": "^2.5.1",
         "@remix-run/react": "^2.5.1",
