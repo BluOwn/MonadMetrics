@@ -17,6 +17,11 @@ interface DashboardProps {
   txTrend: Array<{ blockNumber: number; transactionCount: number }>;
 }
 
+const formatDate = (timestamp: number) => {
+  const date = new Date(timestamp * 1000);
+  return date.toISOString().replace('T', ' ').slice(0, 19);
+};
+
 export function Dashboard({
   networkStats,
   recentBlocks,
@@ -131,7 +136,7 @@ export function Dashboard({
                       </Link>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      {new Date(block.timestamp * 1000).toLocaleString()}
+                      {formatDate(block.timestamp)}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                       {block.transactions.length}

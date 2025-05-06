@@ -540,8 +540,12 @@ if (import.meta) {
     //@ts-expect-error
     "app\\components\\Dashboard.tsx"
   );
-  import.meta.hot.lastModified = "1746539711732.47";
+  import.meta.hot.lastModified = "1746543685548.373";
 }
+var formatDate = (timestamp) => {
+  const date = new Date(timestamp * 1e3);
+  return date.toISOString().replace("T", " ").slice(0, 19);
+};
 function Dashboard({
   networkStats,
   recentBlocks,
@@ -561,113 +565,113 @@ function Dashboard({
     /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("header", { className: "mb-8", children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("h1", { className: "text-3xl font-bold text-gray-800", children: "Monad Testnet Dashboard" }, void 0, false, {
         fileName: "app/components/Dashboard.tsx",
-        lineNumber: 47,
+        lineNumber: 51,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("p", { className: "text-gray-600", children: "Real-time analytics for the Monad Testnet" }, void 0, false, {
         fileName: "app/components/Dashboard.tsx",
-        lineNumber: 48,
+        lineNumber: 52,
         columnNumber: 9
       }, this)
     ] }, void 0, true, {
       fileName: "app/components/Dashboard.tsx",
-      lineNumber: 46,
+      lineNumber: 50,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("section", { className: "mb-8", children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("h2", { className: "text-xl font-semibold mb-4", children: "Key Metrics" }, void 0, false, {
         fileName: "app/components/Dashboard.tsx",
-        lineNumber: 53,
+        lineNumber: 57,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6", children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(MetricCard, { title: "TPS", value: networkStats.tps.toFixed(2), description: "Transactions per second" }, void 0, false, {
           fileName: "app/components/Dashboard.tsx",
-          lineNumber: 55,
+          lineNumber: 59,
           columnNumber: 11
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(MetricCard, { title: "Block Time", value: `${networkStats.avgBlockTime.toFixed(2)}s`, description: "Average time between blocks" }, void 0, false, {
           fileName: "app/components/Dashboard.tsx",
-          lineNumber: 56,
+          lineNumber: 60,
           columnNumber: 11
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(MetricCard, { title: "Latest Block", value: networkStats.latestBlock.toLocaleString(), description: "Current blockchain height" }, void 0, false, {
           fileName: "app/components/Dashboard.tsx",
-          lineNumber: 57,
+          lineNumber: 61,
           columnNumber: 11
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(MetricCard, { title: "Gas Price", value: `${ethers_exports.formatUnits(networkStats.gasPrice || "0", "gwei")} Gwei`, description: "Current gas price" }, void 0, false, {
           fileName: "app/components/Dashboard.tsx",
-          lineNumber: 58,
+          lineNumber: 62,
           columnNumber: 11
         }, this)
       ] }, void 0, true, {
         fileName: "app/components/Dashboard.tsx",
-        lineNumber: 54,
+        lineNumber: 58,
         columnNumber: 9
       }, this)
     ] }, void 0, true, {
       fileName: "app/components/Dashboard.tsx",
-      lineNumber: 52,
+      lineNumber: 56,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("section", { className: "mb-8 grid grid-cols-1 lg:grid-cols-2 gap-6", children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(TransactionChart, { data: txTrend }, void 0, false, {
         fileName: "app/components/Dashboard.tsx",
-        lineNumber: 64,
+        lineNumber: 68,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(BlockTimeChart, { data: blockTimeTrend }, void 0, false, {
         fileName: "app/components/Dashboard.tsx",
-        lineNumber: 65,
+        lineNumber: 69,
         columnNumber: 9
       }, this)
     ] }, void 0, true, {
       fileName: "app/components/Dashboard.tsx",
-      lineNumber: 63,
+      lineNumber: 67,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("section", { className: "mb-8 grid grid-cols-1 lg:grid-cols-2 gap-6", children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(NetworkStatus, { stats: networkStats }, void 0, false, {
         fileName: "app/components/Dashboard.tsx",
-        lineNumber: 70,
+        lineNumber: 74,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(ComparisonChart, { data: chainComparisons, metric: "tps", title: "TPS Comparison", color: "#8884d8" }, void 0, false, {
         fileName: "app/components/Dashboard.tsx",
-        lineNumber: 71,
+        lineNumber: 75,
         columnNumber: 9
       }, this)
     ] }, void 0, true, {
       fileName: "app/components/Dashboard.tsx",
-      lineNumber: 69,
+      lineNumber: 73,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("section", { className: "mb-8", children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("h2", { className: "text-xl font-semibold mb-4", children: "Chain Comparisons" }, void 0, false, {
         fileName: "app/components/Dashboard.tsx",
-        lineNumber: 75,
+        lineNumber: 79,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "grid grid-cols-1 gap-6", children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(ComparisonChart, { data: chainComparisons, metric: "blockTime", title: "Block Time Comparison (seconds)", color: "#82ca9d" }, void 0, false, {
           fileName: "app/components/Dashboard.tsx",
-          lineNumber: 77,
+          lineNumber: 81,
           columnNumber: 11
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(ComparisonChart, { data: chainComparisons, metric: "finality", title: "Finality Time Comparison (seconds)", color: "#ffc658" }, void 0, false, {
           fileName: "app/components/Dashboard.tsx",
-          lineNumber: 78,
+          lineNumber: 82,
           columnNumber: 11
         }, this)
       ] }, void 0, true, {
         fileName: "app/components/Dashboard.tsx",
-        lineNumber: 76,
+        lineNumber: 80,
         columnNumber: 9
       }, this)
     ] }, void 0, true, {
       fileName: "app/components/Dashboard.tsx",
-      lineNumber: 74,
+      lineNumber: 78,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("section", { className: "grid grid-cols-1 lg:grid-cols-2 gap-8", children: [
@@ -675,68 +679,68 @@ function Dashboard({
         /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "flex justify-between items-center mb-4", children: [
           /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("h2", { className: "text-xl font-semibold", children: "Recent Blocks" }, void 0, false, {
             fileName: "app/components/Dashboard.tsx",
-            lineNumber: 86,
+            lineNumber: 90,
             columnNumber: 13
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(Link, { to: "/blocks", className: "text-blue-500 hover:text-blue-700", children: "View All \u2192" }, void 0, false, {
             fileName: "app/components/Dashboard.tsx",
-            lineNumber: 87,
+            lineNumber: 91,
             columnNumber: 13
           }, this)
         ] }, void 0, true, {
           fileName: "app/components/Dashboard.tsx",
-          lineNumber: 85,
+          lineNumber: 89,
           columnNumber: 11
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "bg-white rounded-lg shadow overflow-hidden", children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("table", { className: "min-w-full divide-y divide-gray-200", children: [
           /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("thead", { className: "bg-gray-50", children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("tr", { children: [
             /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("th", { className: "px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider", children: "Block" }, void 0, false, {
               fileName: "app/components/Dashboard.tsx",
-              lineNumber: 95,
+              lineNumber: 99,
               columnNumber: 19
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("th", { className: "px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider", children: "Timestamp" }, void 0, false, {
               fileName: "app/components/Dashboard.tsx",
-              lineNumber: 96,
+              lineNumber: 100,
               columnNumber: 19
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("th", { className: "px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider", children: "Txs" }, void 0, false, {
               fileName: "app/components/Dashboard.tsx",
-              lineNumber: 97,
+              lineNumber: 101,
               columnNumber: 19
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("th", { className: "px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider", children: "Gas Used" }, void 0, false, {
               fileName: "app/components/Dashboard.tsx",
-              lineNumber: 98,
+              lineNumber: 102,
               columnNumber: 19
             }, this)
           ] }, void 0, true, {
             fileName: "app/components/Dashboard.tsx",
-            lineNumber: 94,
+            lineNumber: 98,
             columnNumber: 17
           }, this) }, void 0, false, {
             fileName: "app/components/Dashboard.tsx",
-            lineNumber: 93,
+            lineNumber: 97,
             columnNumber: 15
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("tbody", { className: "bg-white divide-y divide-gray-200", children: recentBlocks.slice(0, 5).map((block) => /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("tr", { className: "hover:bg-gray-50", children: [
             /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("td", { className: "px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-500", children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(Link, { to: `/blocks/${block.number}`, children: block.number }, void 0, false, {
               fileName: "app/components/Dashboard.tsx",
-              lineNumber: 104,
+              lineNumber: 108,
               columnNumber: 23
             }, this) }, void 0, false, {
               fileName: "app/components/Dashboard.tsx",
-              lineNumber: 103,
+              lineNumber: 107,
               columnNumber: 21
             }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("td", { className: "px-6 py-4 whitespace-nowrap text-sm text-gray-500", children: new Date(block.timestamp * 1e3).toLocaleString() }, void 0, false, {
+            /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("td", { className: "px-6 py-4 whitespace-nowrap text-sm text-gray-500", children: formatDate(block.timestamp) }, void 0, false, {
               fileName: "app/components/Dashboard.tsx",
-              lineNumber: 108,
+              lineNumber: 112,
               columnNumber: 21
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("td", { className: "px-6 py-4 whitespace-nowrap text-sm text-gray-500", children: block.transactions.length }, void 0, false, {
               fileName: "app/components/Dashboard.tsx",
-              lineNumber: 111,
+              lineNumber: 115,
               columnNumber: 21
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("td", { className: "px-6 py-4 whitespace-nowrap text-sm text-gray-500", children: [
@@ -744,78 +748,78 @@ function Dashboard({
               " Gwei"
             ] }, void 0, true, {
               fileName: "app/components/Dashboard.tsx",
-              lineNumber: 114,
+              lineNumber: 118,
               columnNumber: 21
             }, this)
           ] }, block.hash, true, {
             fileName: "app/components/Dashboard.tsx",
-            lineNumber: 102,
+            lineNumber: 106,
             columnNumber: 56
           }, this)) }, void 0, false, {
             fileName: "app/components/Dashboard.tsx",
-            lineNumber: 101,
+            lineNumber: 105,
             columnNumber: 15
           }, this)
         ] }, void 0, true, {
           fileName: "app/components/Dashboard.tsx",
-          lineNumber: 92,
+          lineNumber: 96,
           columnNumber: 13
         }, this) }, void 0, false, {
           fileName: "app/components/Dashboard.tsx",
-          lineNumber: 91,
+          lineNumber: 95,
           columnNumber: 11
         }, this)
       ] }, void 0, true, {
         fileName: "app/components/Dashboard.tsx",
-        lineNumber: 84,
+        lineNumber: 88,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "flex justify-between items-center mb-4", children: [
           /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("h2", { className: "text-xl font-semibold", children: "Recent Transactions" }, void 0, false, {
             fileName: "app/components/Dashboard.tsx",
-            lineNumber: 125,
+            lineNumber: 129,
             columnNumber: 13
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(Link, { to: "/transactions", className: "text-blue-500 hover:text-blue-700", children: "View All \u2192" }, void 0, false, {
             fileName: "app/components/Dashboard.tsx",
-            lineNumber: 126,
+            lineNumber: 130,
             columnNumber: 13
           }, this)
         ] }, void 0, true, {
           fileName: "app/components/Dashboard.tsx",
-          lineNumber: 124,
+          lineNumber: 128,
           columnNumber: 11
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "bg-white rounded-lg shadow overflow-hidden", children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("table", { className: "min-w-full divide-y divide-gray-200", children: [
           /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("thead", { className: "bg-gray-50", children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("tr", { children: [
             /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("th", { className: "px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider", children: "Tx Hash" }, void 0, false, {
               fileName: "app/components/Dashboard.tsx",
-              lineNumber: 134,
+              lineNumber: 138,
               columnNumber: 19
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("th", { className: "px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider", children: "From" }, void 0, false, {
               fileName: "app/components/Dashboard.tsx",
-              lineNumber: 135,
+              lineNumber: 139,
               columnNumber: 19
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("th", { className: "px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider", children: "To" }, void 0, false, {
               fileName: "app/components/Dashboard.tsx",
-              lineNumber: 136,
+              lineNumber: 140,
               columnNumber: 19
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("th", { className: "px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider", children: "Value" }, void 0, false, {
               fileName: "app/components/Dashboard.tsx",
-              lineNumber: 137,
+              lineNumber: 141,
               columnNumber: 19
             }, this)
           ] }, void 0, true, {
             fileName: "app/components/Dashboard.tsx",
-            lineNumber: 133,
+            lineNumber: 137,
             columnNumber: 17
           }, this) }, void 0, false, {
             fileName: "app/components/Dashboard.tsx",
-            lineNumber: 132,
+            lineNumber: 136,
             columnNumber: 15
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("tbody", { className: "bg-white divide-y divide-gray-200", children: recentTransactions.slice(0, 5).map((tx) => /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("tr", { className: "hover:bg-gray-50", children: [
@@ -824,11 +828,11 @@ function Dashboard({
               "..."
             ] }, void 0, true, {
               fileName: "app/components/Dashboard.tsx",
-              lineNumber: 143,
+              lineNumber: 147,
               columnNumber: 23
             }, this) }, void 0, false, {
               fileName: "app/components/Dashboard.tsx",
-              lineNumber: 142,
+              lineNumber: 146,
               columnNumber: 21
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("td", { className: "px-6 py-4 whitespace-nowrap text-sm text-gray-500", children: [
@@ -836,12 +840,12 @@ function Dashboard({
               "..."
             ] }, void 0, true, {
               fileName: "app/components/Dashboard.tsx",
-              lineNumber: 147,
+              lineNumber: 151,
               columnNumber: 21
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("td", { className: "px-6 py-4 whitespace-nowrap text-sm text-gray-500", children: tx.to ? `${tx.to.substring(0, 8)}...` : "Contract Creation" }, void 0, false, {
               fileName: "app/components/Dashboard.tsx",
-              lineNumber: 150,
+              lineNumber: 154,
               columnNumber: 21
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("td", { className: "px-6 py-4 whitespace-nowrap text-sm text-gray-500", children: [
@@ -849,40 +853,40 @@ function Dashboard({
               " MON"
             ] }, void 0, true, {
               fileName: "app/components/Dashboard.tsx",
-              lineNumber: 153,
+              lineNumber: 157,
               columnNumber: 21
             }, this)
           ] }, tx.hash, true, {
             fileName: "app/components/Dashboard.tsx",
-            lineNumber: 141,
+            lineNumber: 145,
             columnNumber: 59
           }, this)) }, void 0, false, {
             fileName: "app/components/Dashboard.tsx",
-            lineNumber: 140,
+            lineNumber: 144,
             columnNumber: 15
           }, this)
         ] }, void 0, true, {
           fileName: "app/components/Dashboard.tsx",
-          lineNumber: 131,
+          lineNumber: 135,
           columnNumber: 13
         }, this) }, void 0, false, {
           fileName: "app/components/Dashboard.tsx",
-          lineNumber: 130,
+          lineNumber: 134,
           columnNumber: 11
         }, this)
       ] }, void 0, true, {
         fileName: "app/components/Dashboard.tsx",
-        lineNumber: 123,
+        lineNumber: 127,
         columnNumber: 9
       }, this)
     ] }, void 0, true, {
       fileName: "app/components/Dashboard.tsx",
-      lineNumber: 83,
+      lineNumber: 87,
       columnNumber: 7
     }, this)
   ] }, void 0, true, {
     fileName: "app/components/Dashboard.tsx",
-    lineNumber: 45,
+    lineNumber: 49,
     columnNumber: 10
   }, this);
 }
@@ -949,4 +953,4 @@ window.$RefreshSig$ = prevRefreshSig;
 export {
   Index as default
 };
-//# sourceMappingURL=/build/routes/_index-VCKFEUDO.js.map
+//# sourceMappingURL=/build/routes/_index-CEYWY3NI.js.map

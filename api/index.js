@@ -1557,7 +1557,7 @@ function NetworkStatus({ stats }) {
 }
 
 // app/components/Dashboard.tsx
-var import_jsx_dev_runtime11 = require("react/jsx-dev-runtime");
+var import_jsx_dev_runtime11 = require("react/jsx-dev-runtime"), formatDate = (timestamp) => new Date(timestamp * 1e3).toISOString().replace("T", " ").slice(0, 19);
 function Dashboard({
   networkStats,
   recentBlocks,
@@ -1577,23 +1577,23 @@ function Dashboard({
     /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("header", { className: "mb-8", children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("h1", { className: "text-3xl font-bold text-gray-800", children: "Monad Testnet Dashboard" }, void 0, !1, {
         fileName: "app/components/Dashboard.tsx",
-        lineNumber: 40,
+        lineNumber: 45,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("p", { className: "text-gray-600", children: "Real-time analytics for the Monad Testnet" }, void 0, !1, {
         fileName: "app/components/Dashboard.tsx",
-        lineNumber: 41,
+        lineNumber: 46,
         columnNumber: 9
       }, this)
     ] }, void 0, !0, {
       fileName: "app/components/Dashboard.tsx",
-      lineNumber: 39,
+      lineNumber: 44,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("section", { className: "mb-8", children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("h2", { className: "text-xl font-semibold mb-4", children: "Key Metrics" }, void 0, !1, {
         fileName: "app/components/Dashboard.tsx",
-        lineNumber: 46,
+        lineNumber: 51,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("div", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6", children: [
@@ -1608,7 +1608,7 @@ function Dashboard({
           !1,
           {
             fileName: "app/components/Dashboard.tsx",
-            lineNumber: 48,
+            lineNumber: 53,
             columnNumber: 11
           },
           this
@@ -1624,7 +1624,7 @@ function Dashboard({
           !1,
           {
             fileName: "app/components/Dashboard.tsx",
-            lineNumber: 53,
+            lineNumber: 58,
             columnNumber: 11
           },
           this
@@ -1640,7 +1640,7 @@ function Dashboard({
           !1,
           {
             fileName: "app/components/Dashboard.tsx",
-            lineNumber: 58,
+            lineNumber: 63,
             columnNumber: 11
           },
           this
@@ -1656,41 +1656,41 @@ function Dashboard({
           !1,
           {
             fileName: "app/components/Dashboard.tsx",
-            lineNumber: 63,
+            lineNumber: 68,
             columnNumber: 11
           },
           this
         )
       ] }, void 0, !0, {
         fileName: "app/components/Dashboard.tsx",
-        lineNumber: 47,
+        lineNumber: 52,
         columnNumber: 9
       }, this)
     ] }, void 0, !0, {
       fileName: "app/components/Dashboard.tsx",
-      lineNumber: 45,
+      lineNumber: 50,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("section", { className: "mb-8 grid grid-cols-1 lg:grid-cols-2 gap-6", children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(TransactionChart, { data: txTrend }, void 0, !1, {
         fileName: "app/components/Dashboard.tsx",
-        lineNumber: 73,
+        lineNumber: 78,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(BlockTimeChart, { data: blockTimeTrend }, void 0, !1, {
         fileName: "app/components/Dashboard.tsx",
-        lineNumber: 74,
+        lineNumber: 79,
         columnNumber: 9
       }, this)
     ] }, void 0, !0, {
       fileName: "app/components/Dashboard.tsx",
-      lineNumber: 72,
+      lineNumber: 77,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("section", { className: "mb-8 grid grid-cols-1 lg:grid-cols-2 gap-6", children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(NetworkStatus, { stats: networkStats }, void 0, !1, {
         fileName: "app/components/Dashboard.tsx",
-        lineNumber: 79,
+        lineNumber: 84,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(
@@ -1705,20 +1705,20 @@ function Dashboard({
         !1,
         {
           fileName: "app/components/Dashboard.tsx",
-          lineNumber: 80,
+          lineNumber: 85,
           columnNumber: 9
         },
         this
       )
     ] }, void 0, !0, {
       fileName: "app/components/Dashboard.tsx",
-      lineNumber: 78,
+      lineNumber: 83,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("section", { className: "mb-8", children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("h2", { className: "text-xl font-semibold mb-4", children: "Chain Comparisons" }, void 0, !1, {
         fileName: "app/components/Dashboard.tsx",
-        lineNumber: 89,
+        lineNumber: 94,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("div", { className: "grid grid-cols-1 gap-6", children: [
@@ -1734,7 +1734,7 @@ function Dashboard({
           !1,
           {
             fileName: "app/components/Dashboard.tsx",
-            lineNumber: 91,
+            lineNumber: 96,
             columnNumber: 11
           },
           this
@@ -1751,19 +1751,19 @@ function Dashboard({
           !1,
           {
             fileName: "app/components/Dashboard.tsx",
-            lineNumber: 97,
+            lineNumber: 102,
             columnNumber: 11
           },
           this
         )
       ] }, void 0, !0, {
         fileName: "app/components/Dashboard.tsx",
-        lineNumber: 90,
+        lineNumber: 95,
         columnNumber: 9
       }, this)
     ] }, void 0, !0, {
       fileName: "app/components/Dashboard.tsx",
-      lineNumber: 88,
+      lineNumber: 93,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("section", { className: "grid grid-cols-1 lg:grid-cols-2 gap-8", children: [
@@ -1771,68 +1771,68 @@ function Dashboard({
         /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("div", { className: "flex justify-between items-center mb-4", children: [
           /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("h2", { className: "text-xl font-semibold", children: "Recent Blocks" }, void 0, !1, {
             fileName: "app/components/Dashboard.tsx",
-            lineNumber: 110,
+            lineNumber: 115,
             columnNumber: 13
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_react9.Link, { to: "/blocks", className: "text-blue-500 hover:text-blue-700", children: "View All \u2192" }, void 0, !1, {
             fileName: "app/components/Dashboard.tsx",
-            lineNumber: 111,
+            lineNumber: 116,
             columnNumber: 13
           }, this)
         ] }, void 0, !0, {
           fileName: "app/components/Dashboard.tsx",
-          lineNumber: 109,
+          lineNumber: 114,
           columnNumber: 11
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("div", { className: "bg-white rounded-lg shadow overflow-hidden", children: /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("table", { className: "min-w-full divide-y divide-gray-200", children: [
           /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("thead", { className: "bg-gray-50", children: /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("tr", { children: [
             /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("th", { className: "px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider", children: "Block" }, void 0, !1, {
               fileName: "app/components/Dashboard.tsx",
-              lineNumber: 119,
+              lineNumber: 124,
               columnNumber: 19
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("th", { className: "px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider", children: "Timestamp" }, void 0, !1, {
               fileName: "app/components/Dashboard.tsx",
-              lineNumber: 120,
+              lineNumber: 125,
               columnNumber: 19
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("th", { className: "px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider", children: "Txs" }, void 0, !1, {
               fileName: "app/components/Dashboard.tsx",
-              lineNumber: 121,
+              lineNumber: 126,
               columnNumber: 19
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("th", { className: "px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider", children: "Gas Used" }, void 0, !1, {
               fileName: "app/components/Dashboard.tsx",
-              lineNumber: 122,
+              lineNumber: 127,
               columnNumber: 19
             }, this)
           ] }, void 0, !0, {
             fileName: "app/components/Dashboard.tsx",
-            lineNumber: 118,
+            lineNumber: 123,
             columnNumber: 17
           }, this) }, void 0, !1, {
             fileName: "app/components/Dashboard.tsx",
-            lineNumber: 117,
+            lineNumber: 122,
             columnNumber: 15
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("tbody", { className: "bg-white divide-y divide-gray-200", children: recentBlocks.slice(0, 5).map((block) => /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("tr", { className: "hover:bg-gray-50", children: [
             /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("td", { className: "px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-500", children: /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_react9.Link, { to: `/blocks/${block.number}`, children: block.number }, void 0, !1, {
               fileName: "app/components/Dashboard.tsx",
-              lineNumber: 129,
+              lineNumber: 134,
               columnNumber: 23
             }, this) }, void 0, !1, {
-              fileName: "app/components/Dashboard.tsx",
-              lineNumber: 128,
-              columnNumber: 21
-            }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("td", { className: "px-6 py-4 whitespace-nowrap text-sm text-gray-500", children: new Date(block.timestamp * 1e3).toLocaleString() }, void 0, !1, {
               fileName: "app/components/Dashboard.tsx",
               lineNumber: 133,
               columnNumber: 21
             }, this),
+            /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("td", { className: "px-6 py-4 whitespace-nowrap text-sm text-gray-500", children: formatDate(block.timestamp) }, void 0, !1, {
+              fileName: "app/components/Dashboard.tsx",
+              lineNumber: 138,
+              columnNumber: 21
+            }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("td", { className: "px-6 py-4 whitespace-nowrap text-sm text-gray-500", children: block.transactions.length }, void 0, !1, {
               fileName: "app/components/Dashboard.tsx",
-              lineNumber: 136,
+              lineNumber: 141,
               columnNumber: 21
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("td", { className: "px-6 py-4 whitespace-nowrap text-sm text-gray-500", children: [
@@ -1840,78 +1840,78 @@ function Dashboard({
               " Gwei"
             ] }, void 0, !0, {
               fileName: "app/components/Dashboard.tsx",
-              lineNumber: 139,
+              lineNumber: 144,
               columnNumber: 21
             }, this)
           ] }, block.hash, !0, {
             fileName: "app/components/Dashboard.tsx",
-            lineNumber: 127,
+            lineNumber: 132,
             columnNumber: 19
           }, this)) }, void 0, !1, {
             fileName: "app/components/Dashboard.tsx",
-            lineNumber: 125,
+            lineNumber: 130,
             columnNumber: 15
           }, this)
         ] }, void 0, !0, {
           fileName: "app/components/Dashboard.tsx",
-          lineNumber: 116,
+          lineNumber: 121,
           columnNumber: 13
         }, this) }, void 0, !1, {
           fileName: "app/components/Dashboard.tsx",
-          lineNumber: 115,
+          lineNumber: 120,
           columnNumber: 11
         }, this)
       ] }, void 0, !0, {
         fileName: "app/components/Dashboard.tsx",
-        lineNumber: 108,
+        lineNumber: 113,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("div", { children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("div", { className: "flex justify-between items-center mb-4", children: [
           /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("h2", { className: "text-xl font-semibold", children: "Recent Transactions" }, void 0, !1, {
             fileName: "app/components/Dashboard.tsx",
-            lineNumber: 151,
+            lineNumber: 156,
             columnNumber: 13
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_react9.Link, { to: "/transactions", className: "text-blue-500 hover:text-blue-700", children: "View All \u2192" }, void 0, !1, {
             fileName: "app/components/Dashboard.tsx",
-            lineNumber: 152,
+            lineNumber: 157,
             columnNumber: 13
           }, this)
         ] }, void 0, !0, {
           fileName: "app/components/Dashboard.tsx",
-          lineNumber: 150,
+          lineNumber: 155,
           columnNumber: 11
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("div", { className: "bg-white rounded-lg shadow overflow-hidden", children: /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("table", { className: "min-w-full divide-y divide-gray-200", children: [
           /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("thead", { className: "bg-gray-50", children: /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("tr", { children: [
             /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("th", { className: "px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider", children: "Tx Hash" }, void 0, !1, {
               fileName: "app/components/Dashboard.tsx",
-              lineNumber: 160,
+              lineNumber: 165,
               columnNumber: 19
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("th", { className: "px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider", children: "From" }, void 0, !1, {
               fileName: "app/components/Dashboard.tsx",
-              lineNumber: 161,
+              lineNumber: 166,
               columnNumber: 19
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("th", { className: "px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider", children: "To" }, void 0, !1, {
               fileName: "app/components/Dashboard.tsx",
-              lineNumber: 162,
+              lineNumber: 167,
               columnNumber: 19
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("th", { className: "px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider", children: "Value" }, void 0, !1, {
               fileName: "app/components/Dashboard.tsx",
-              lineNumber: 163,
+              lineNumber: 168,
               columnNumber: 19
             }, this)
           ] }, void 0, !0, {
             fileName: "app/components/Dashboard.tsx",
-            lineNumber: 159,
+            lineNumber: 164,
             columnNumber: 17
           }, this) }, void 0, !1, {
             fileName: "app/components/Dashboard.tsx",
-            lineNumber: 158,
+            lineNumber: 163,
             columnNumber: 15
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("tbody", { className: "bg-white divide-y divide-gray-200", children: recentTransactions.slice(0, 5).map((tx) => /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("tr", { className: "hover:bg-gray-50", children: [
@@ -1920,11 +1920,11 @@ function Dashboard({
               "..."
             ] }, void 0, !0, {
               fileName: "app/components/Dashboard.tsx",
-              lineNumber: 170,
+              lineNumber: 175,
               columnNumber: 23
             }, this) }, void 0, !1, {
               fileName: "app/components/Dashboard.tsx",
-              lineNumber: 169,
+              lineNumber: 174,
               columnNumber: 21
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("td", { className: "px-6 py-4 whitespace-nowrap text-sm text-gray-500", children: [
@@ -1932,12 +1932,12 @@ function Dashboard({
               "..."
             ] }, void 0, !0, {
               fileName: "app/components/Dashboard.tsx",
-              lineNumber: 174,
+              lineNumber: 179,
               columnNumber: 21
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("td", { className: "px-6 py-4 whitespace-nowrap text-sm text-gray-500", children: tx.to ? `${tx.to.substring(0, 8)}...` : "Contract Creation" }, void 0, !1, {
               fileName: "app/components/Dashboard.tsx",
-              lineNumber: 177,
+              lineNumber: 182,
               columnNumber: 21
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("td", { className: "px-6 py-4 whitespace-nowrap text-sm text-gray-500", children: [
@@ -1945,40 +1945,40 @@ function Dashboard({
               " MON"
             ] }, void 0, !0, {
               fileName: "app/components/Dashboard.tsx",
-              lineNumber: 180,
+              lineNumber: 185,
               columnNumber: 21
             }, this)
           ] }, tx.hash, !0, {
             fileName: "app/components/Dashboard.tsx",
-            lineNumber: 168,
+            lineNumber: 173,
             columnNumber: 19
           }, this)) }, void 0, !1, {
             fileName: "app/components/Dashboard.tsx",
-            lineNumber: 166,
+            lineNumber: 171,
             columnNumber: 15
           }, this)
         ] }, void 0, !0, {
           fileName: "app/components/Dashboard.tsx",
-          lineNumber: 157,
+          lineNumber: 162,
           columnNumber: 13
         }, this) }, void 0, !1, {
           fileName: "app/components/Dashboard.tsx",
-          lineNumber: 156,
+          lineNumber: 161,
           columnNumber: 11
         }, this)
       ] }, void 0, !0, {
         fileName: "app/components/Dashboard.tsx",
-        lineNumber: 149,
+        lineNumber: 154,
         columnNumber: 9
       }, this)
     ] }, void 0, !0, {
       fileName: "app/components/Dashboard.tsx",
-      lineNumber: 107,
+      lineNumber: 112,
       columnNumber: 7
     }, this)
   ] }, void 0, !0, {
     fileName: "app/components/Dashboard.tsx",
-    lineNumber: 38,
+    lineNumber: 43,
     columnNumber: 5
   }, this);
 }
@@ -2013,7 +2013,7 @@ function Index() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-EDWB3VHI.js", imports: ["/build/_shared/chunk-ZRM3C6E3.js", "/build/_shared/chunk-QVPICV7U.js", "/build/_shared/chunk-SAX64HLP.js", "/build/_shared/chunk-5CTYPWPN.js", "/build/_shared/chunk-JDDHJGUF.js", "/build/_shared/chunk-ZLVDHCXD.js", "/build/_shared/chunk-PONQPJE7.js", "/build/_shared/chunk-AJAKA5UB.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-GDJ7NQVC.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-VCKFEUDO.js", imports: ["/build/_shared/chunk-CZOLP6YT.js", "/build/_shared/chunk-HHB33NJO.js", "/build/_shared/chunk-IXQKNF5A.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/blocks": { id: "routes/blocks", parentId: "root", path: "blocks", index: void 0, caseSensitive: void 0, module: "/build/routes/blocks-EVTIECF6.js", imports: ["/build/_shared/chunk-C2EKPWZ6.js", "/build/_shared/chunk-HHB33NJO.js", "/build/_shared/chunk-IXQKNF5A.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/compare": { id: "routes/compare", parentId: "root", path: "compare", index: void 0, caseSensitive: void 0, module: "/build/routes/compare-WT4DLEV3.js", imports: ["/build/_shared/chunk-C2EKPWZ6.js", "/build/_shared/chunk-CZOLP6YT.js", "/build/_shared/chunk-IXQKNF5A.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/transactions": { id: "routes/transactions", parentId: "root", path: "transactions", index: void 0, caseSensitive: void 0, module: "/build/routes/transactions-KD4OLV53.js", imports: ["/build/_shared/chunk-C2EKPWZ6.js", "/build/_shared/chunk-HHB33NJO.js", "/build/_shared/chunk-IXQKNF5A.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "64d4718c", hmr: { runtime: "/build/_shared\\chunk-SAX64HLP.js", timestamp: 1746542144616 }, url: "/build/manifest-64D4718C.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-EDWB3VHI.js", imports: ["/build/_shared/chunk-ZRM3C6E3.js", "/build/_shared/chunk-QVPICV7U.js", "/build/_shared/chunk-SAX64HLP.js", "/build/_shared/chunk-5CTYPWPN.js", "/build/_shared/chunk-JDDHJGUF.js", "/build/_shared/chunk-ZLVDHCXD.js", "/build/_shared/chunk-PONQPJE7.js", "/build/_shared/chunk-AJAKA5UB.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-GDJ7NQVC.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-CEYWY3NI.js", imports: ["/build/_shared/chunk-CZOLP6YT.js", "/build/_shared/chunk-HHB33NJO.js", "/build/_shared/chunk-IXQKNF5A.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/blocks": { id: "routes/blocks", parentId: "root", path: "blocks", index: void 0, caseSensitive: void 0, module: "/build/routes/blocks-EVTIECF6.js", imports: ["/build/_shared/chunk-C2EKPWZ6.js", "/build/_shared/chunk-HHB33NJO.js", "/build/_shared/chunk-IXQKNF5A.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/compare": { id: "routes/compare", parentId: "root", path: "compare", index: void 0, caseSensitive: void 0, module: "/build/routes/compare-WT4DLEV3.js", imports: ["/build/_shared/chunk-C2EKPWZ6.js", "/build/_shared/chunk-CZOLP6YT.js", "/build/_shared/chunk-IXQKNF5A.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/transactions": { id: "routes/transactions", parentId: "root", path: "transactions", index: void 0, caseSensitive: void 0, module: "/build/routes/transactions-KD4OLV53.js", imports: ["/build/_shared/chunk-C2EKPWZ6.js", "/build/_shared/chunk-HHB33NJO.js", "/build/_shared/chunk-IXQKNF5A.js"], hasAction: !1, hasLoader: !0, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "6f0178e5", hmr: { runtime: "/build/_shared\\chunk-SAX64HLP.js", timestamp: 1746543686164 }, url: "/build/manifest-6F0178E5.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var mode = "development", assetsBuildDirectory = "public/build", future = { v3_fetcherPersist: !0, v3_relativeSplatPath: !0, v3_throwAbortReason: !0, v3_routeConfig: !1, v3_singleFetch: !0, v3_lazyRouteDiscovery: !0, unstable_optimizeDeps: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
