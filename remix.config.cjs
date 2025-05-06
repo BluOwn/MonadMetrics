@@ -12,9 +12,7 @@ module.exports = {
     v3_singleFetch: true,
     v3_throwAbortReason: true
   },
-  serverDependenciesToBundle: [/^marked.*/],
+  serverDependenciesToBundle: [/^marked.*/, "@farcaster/frame-sdk"],
   publicPath: "/build/",
-  serverBuildPath: "api/index.js",
-  assetsBuildDirectory: "public/build",
-  devServerPort: 3000,
-}; 
+  assetsBuildDirectory: "public/build"
+};

@@ -2,36 +2,5 @@
   "buildCommand": "npm run build",
   "devCommand": "npm run dev",
   "installCommand": "npm install",
-  "framework": "remix",
-  "outputDirectory": "public/build",
-  "builds": [
-    {
-      "src": "server.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "build/**",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/build/(.*)",
-      "headers": {
-        "cache-control": "public, max-age=31536000, immutable"
-      },
-      "continue": true
-    },
-    {
-      "src": "/build/index.js",
-      "dest": "/build/index.js"
-    },
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/server.js"
-    }
-  ]
-} 
+  "framework": "remix"
+}
