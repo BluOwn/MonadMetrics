@@ -1,5 +1,6 @@
 import React from "react";
 import type { NetworkStats } from "../lib/types";
+import { formatUnits } from "ethers";
 
 interface NetworkStatusProps {
   stats: NetworkStats;
@@ -21,6 +22,15 @@ export function NetworkStatus({ stats }: NetworkStatusProps) {
   };
 
   const status = getStatus();
+
+  // Format gas price safely
+  const formatGasPrice = (price: string) => {
+    try {
+      return `${formatUnits(price || "0", "gwei")} Gwei`;
+    } catch (error) {
+      return `${price || "0"} Gwei`;
+    }
+  };
 
   return (
     <div className="bg-white rounded-lg shadow-md p-6">
@@ -49,7 +59,7 @@ export function NetworkStatus({ stats }: NetworkStatusProps) {
         
         <div>
           <p className="text-sm text-gray-500">Gas Price</p>
-          <p className="font-medium">{ethers.formatUnits(stats.gasPrice || "0", "gwei")} Gwei</p>
+          <p className="font-medium">{formatGasPrice(stats.gasPrice)}</p>
         </div>
         
         <div>

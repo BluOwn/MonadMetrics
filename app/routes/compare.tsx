@@ -3,7 +3,13 @@ import { useLoaderData, Link } from "@remix-run/react";
 import { getChainComparisons } from "~/lib/monad.server";
 import { ComparisonChart } from "~/components/ComparisonChart";
 import { useEffect } from "react";
-import { sdk } from '@farcaster/frame-sdk';
+
+interface ChainComparison {
+  name: string;
+  tps: number;
+  blockTime: number;
+  finality: number;
+}
 
 export const loader = async () => {
   try {
@@ -19,7 +25,12 @@ export default function Compare() {
   const { chainComparisons } = useLoaderData<typeof loader>();
   
   useEffect(() => {
-    sdk.actions.ready();
+    try {
+      const sdk = require('@farcaster/frame-sdk');
+      sdk.actions.ready();
+    } catch (error) {
+      console.log('Farcaster SDK not available');
+    }
   }, []);
   
   return (

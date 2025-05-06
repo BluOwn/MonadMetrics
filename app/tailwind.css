@@ -48,14 +48,5 @@ body {
 }
 
 /* Monad theme colors */
-.bg-monad-primary {
-  @apply bg-monad-primary;
-}
-
-.bg-monad-secondary {
-  @apply bg-monad-secondary;
-}
-
-.text-monad-accent {
-  @apply text-monad-accent;
-}
+/* These classes are now directly available through Tailwind's color system */
+/* Use them like: bg-monad-primary, bg-monad-secondary, text-monad-accent */

@@ -2,7 +2,16 @@ import { json } from "@remix-run/node";
 import { useLoaderData, Link } from "@remix-run/react";
 import { getRecentBlocks } from "~/lib/monad.server";
 import { useEffect } from "react";
-import { sdk } from '@farcaster/frame-sdk';
+import { ethers } from "ethers";
+
+interface Block {
+  number: number;
+  hash: string;
+  timestamp: number;
+  transactions: string[];
+  gasUsed: string;
+  gasLimit: string;
+}
 
 export const loader = async () => {
   try {
@@ -18,7 +27,12 @@ export default function Blocks() {
   const { blocks } = useLoaderData<typeof loader>();
   
   useEffect(() => {
-    sdk.actions.ready();
+    try {
+      const sdk = require('@farcaster/frame-sdk');
+      sdk.actions.ready();
+    } catch (error) {
+      console.log('Farcaster SDK not available');
+    }
   }, []);
   
   return (

@@ -2,7 +2,16 @@ import { json } from "@remix-run/node";
 import { useLoaderData, Link } from "@remix-run/react";
 import { getRecentTransactions } from "~/lib/monad.server";
 import { useEffect, useState } from "react";
-import { sdk } from '@farcaster/frame-sdk';
+import { ethers } from "ethers";
+
+interface Transaction {
+  hash: string;
+  blockNumber: number;
+  from: string;
+  to: string | null;
+  value: string;
+  timestamp: number;
+}
 
 export const loader = async () => {
   try {
@@ -19,7 +28,12 @@ export default function Transactions() {
   const [searchTerm, setSearchTerm] = useState("");
   
   useEffect(() => {
-    sdk.actions.ready();
+    try {
+      const sdk = require('@farcaster/frame-sdk');
+      sdk.actions.ready();
+    } catch (error) {
+      console.log('Farcaster SDK not available');
+    }
   }, []);
   
   // Format the value for better display
@@ -31,10 +45,10 @@ export default function Transactions() {
     }
   };
   
-  const filteredTransactions = transactions.filter(tx => 
+  const filteredTransactions = transactions.filter((tx: Transaction) => 
     tx.hash.includes(searchTerm) || 
     tx.from.includes(searchTerm) || 
-    tx.to.includes(searchTerm)
+    (tx.to && tx.to.includes(searchTerm))
   );
   
   return (
