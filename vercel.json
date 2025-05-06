@@ -4,6 +4,12 @@
   "installCommand": "npm install",
   "framework": "remix",
   "outputDirectory": "public/build",
+  "builds": [
+    {
+      "src": "api/index.js",
+      "use": "@vercel/node"
+    }
+  ],
   "routes": [
     {
       "src": "/build/(.*)",
@@ -14,7 +20,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/"
+      "dest": "/api/index.js"
     }
   ]
 } 
