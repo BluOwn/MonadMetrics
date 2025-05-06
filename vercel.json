@@ -23,6 +23,10 @@
       "continue": true
     },
     {
+      "src": "/build/index.js",
+      "dest": "/build/index.js"
+    },
+    {
       "handle": "filesystem"
     },
     {
