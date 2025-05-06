@@ -3,7 +3,7 @@
     "private": true,
     "sideEffects": false,
     "scripts": {
-        "build": "remix build && cp -r build public/",
+        "build": "remix build",
         "dev": "remix dev --manual",
         "start": "remix-serve ./build/index.js",
         "typecheck": "tsc"

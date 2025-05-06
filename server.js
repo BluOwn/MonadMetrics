@@ -1,5 +1,5 @@
 const { createRequestHandler } = require("@remix-run/node");
-const build = require("./build/index.js");
+const build = require("./build");
 
 module.exports = createRequestHandler({
   build,
