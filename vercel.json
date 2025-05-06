@@ -6,7 +6,7 @@
   "outputDirectory": "public/build",
   "builds": [
     {
-      "src": "api/index.js",
+      "src": "server.js",
       "use": "@vercel/node"
     }
   ],
@@ -19,8 +19,11 @@
       "continue": true
     },
     {
+      "handle": "filesystem"
+    },
+    {
       "src": "/(.*)",
-      "dest": "/api/index.js"
+      "dest": "/server.js"
     }
   ]
 } 
