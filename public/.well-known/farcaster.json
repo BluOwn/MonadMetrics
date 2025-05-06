@@ -1,29 +1,27 @@
 {
-    "accountAssociation": {
-      "header": "replace_with_actual_header_from_warpcast",
-      "payload": "replace_with_actual_payload_from_warpcast",
-      "signature": "replace_with_actual_signature_from_warpcast"
-    },
-    "frame": {
-      "version": "1",
-      "name": "Monad Metrics",
-      "iconUrl": "https://monaddashboard.vercel.app/logo.png",
-      "homeUrl": "https://monaddashboard.vercel.app",
-      "imageUrl": "https://monaddashboard.vercel.app/og-image.png",
-      "buttonTitle": "Open Dashboard",
-      "splashImageUrl": "https://monaddashboard.vercel.app/logo.png",
-      "splashBackgroundColor": "#0c111f",
-      "subtitle": "Real-time Monad Testnet Analytics",
-      "description": "Monitor Monad testnet performance with real-time metrics on TPS, block times, and comparisons with other chains",
-      "primaryCategory": "developer-tools",
-      "tags": [
-        "blockchain",
-        "analytics",
-        "metrics",
-        "monad",
-        "web3"
-      ],
-      "ogTitle": "Monad Metrics Dashboard",
-      "ogDescription": "Real-time analytics for the Monad Testnet"
-    }
+  "accountAssociation": {
+    "header": "YOUR_GENERATED_HEADER",
+    "payload": "YOUR_GENERATED_PAYLOAD",
+    "signature": "YOUR_GENERATED_SIGNATURE"
+  },
+  "frame": {
+    "version": "1",
+    "name": "Monad Metrics",
+    "iconUrl": "https://your-vercel-url.vercel.app/logo.png",
+    "homeUrl": "https://your-vercel-url.vercel.app",
+    "imageUrl": "https://your-vercel-url.vercel.app/og-image.png",
+    "buttonTitle": "Open Dashboard",
+    "splashImageUrl": "https://your-vercel-url.vercel.app/logo.png",
+    "splashBackgroundColor": "#0c111f",
+    "subtitle": "Real-time Monad Testnet Analytics",
+    "description": "Monitor Monad testnet performance with real-time metrics on TPS, block times, and comparisons with other chains",
+    "primaryCategory": "developer-tools",
+    "tags": [
+      "blockchain",
+      "analytics",
+      "metrics",
+      "monad",
+      "web3"
+    ]
   }
+}
