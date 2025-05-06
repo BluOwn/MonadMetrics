@@ -8,18 +8,15 @@
     {
       "src": "server.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "build/**",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/build/(.*)",
-      "headers": {
-        "cache-control": "public, max-age=31536000, immutable"
-      },
-      "continue": true
-    },
-    {
-      "src": "/public/build/(.*)",
       "headers": {
         "cache-control": "public, max-age=31536000, immutable"
       },
