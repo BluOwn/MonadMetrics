@@ -2,6 +2,11 @@ import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from "@re
 import type { LinksFunction } from "@remix-run/node";
 import styles from "./tailwind.css";
 
+// Get the URL from environment or use a fallback
+const appUrl = typeof window !== 'undefined' 
+  ? window.location.origin 
+  : 'https://monad-metrics.vercel.app';
+
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: styles },
 ];
@@ -20,14 +25,14 @@ export default function App() {
           name="fc:frame" 
           content={`{
             "version": "next",
-            "imageUrl": "${process.env.VERCEL_URL || 'https://monad-metrics.vercel.app'}/og-image.png",
+            "imageUrl": "${appUrl}/og-image.png",
             "button": {
               "title": "Open Dashboard",
               "action": {
                 "type": "launch_frame",
                 "name": "Monad Metrics",
-                "url": "${process.env.VERCEL_URL || 'https://monad-metrics.vercel.app'}",
-                "splashImageUrl": "${process.env.VERCEL_URL || 'https://monad-metrics.vercel.app'}/logo.png",
+                "url": "${appUrl}",
+                "splashImageUrl": "${appUrl}/logo.png",
                 "splashBackgroundColor": "#0c111f"
               }
             }
