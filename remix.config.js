@@ -1,10 +1,21 @@
 /** @type {import('@remix-run/dev').AppConfig} */
-export default {
+module.exports = {
     ignoredRouteFiles: ["**/.*"],
-    // appDirectory: "app",
-    // assetsBuildDirectory: "public/build",
-    // publicPath: "/build/",
-    // serverBuildPath: "build/index.js",
+    serverModuleFormat: "cjs",
+    serverPlatform: "node",
     tailwind: true,
     postcss: true,
-  };
+    future: {
+        v2_dev: true,
+        v2_errorBoundary: true,
+        v2_headers: true,
+        v2_meta: true,
+        v2_normalizeFormMethod: true,
+        v2_routeConvention: true,
+    },
+    serverDependenciesToBundle: [/^marked.*/],
+    publicPath: "/build/",
+    serverBuildPath: "api/index.js",
+    assetsBuildDirectory: "public/build",
+    devServerPort: 3000,
+};
