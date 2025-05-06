@@ -26098,7 +26098,7 @@ var AreaChart = generateCategoricalChart({
 });
 
 // app/components/ComparisonChart.tsx
-var import_jsx_dev_runtime = __toESM(require_jsx_dev_runtime(), 1);
+var import_jsx_dev_runtime = __toESM(require_jsx_dev_runtime());
 if (!window.$RefreshReg$ || !window.$RefreshSig$ || !window.$RefreshRuntime$) {
   console.warn("remix:hmr: React Fast Refresh only works when the Remix compiler is running in development mode.");
 } else {
@@ -26250,4 +26250,4 @@ object-assign/index.js:
   @license MIT
   *)
 */
-//# sourceMappingURL=/build/_shared/chunk-XYNCWX2A.js.map
+//# sourceMappingURL=/build/_shared/chunk-4OM6PMSE.js.map

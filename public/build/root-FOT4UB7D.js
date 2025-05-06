@@ -23,7 +23,7 @@ import {
 var tailwind_default = "/build/_assets/tailwind-2VR2I54Z.css";
 
 // app/root.tsx
-var import_jsx_dev_runtime = __toESM(require_jsx_dev_runtime(), 1);
+var import_jsx_dev_runtime = __toESM(require_jsx_dev_runtime());
 if (!window.$RefreshReg$ || !window.$RefreshSig$ || !window.$RefreshRuntime$) {
   console.warn("remix:hmr: React Fast Refresh only works when the Remix compiler is running in development mode.");
 } else {
@@ -130,4 +130,4 @@ export {
   App as default,
   links
 };
-//# sourceMappingURL=/build/root-664LEPKT.js.map
+//# sourceMappingURL=/build/root-FOT4UB7D.js.map

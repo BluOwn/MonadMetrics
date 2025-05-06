@@ -9,7 +9,7 @@ import {
   Tooltip,
   XAxis,
   YAxis
-} from "/build/_shared/chunk-XYNCWX2A.js";
+} from "/build/_shared/chunk-4OM6PMSE.js";
 import {
   ethers_exports,
   formatUnits
@@ -48,11 +48,11 @@ var require_metrics = __commonJS({
 });
 
 // app/routes/_index.tsx
-var import_node = __toESM(require_node(), 1);
-var import_metrics = __toESM(require_metrics(), 1);
+var import_node = __toESM(require_node());
+var import_metrics = __toESM(require_metrics());
 
 // app/components/MetricCard.tsx
-var import_jsx_dev_runtime = __toESM(require_jsx_dev_runtime(), 1);
+var import_jsx_dev_runtime = __toESM(require_jsx_dev_runtime());
 if (!window.$RefreshReg$ || !window.$RefreshSig$ || !window.$RefreshRuntime$) {
   console.warn("remix:hmr: React Fast Refresh only works when the Remix compiler is running in development mode.");
 } else {
@@ -135,7 +135,7 @@ window.$RefreshReg$ = prevRefreshReg;
 window.$RefreshSig$ = prevRefreshSig;
 
 // app/components/TransactionChart.tsx
-var import_jsx_dev_runtime2 = __toESM(require_jsx_dev_runtime(), 1);
+var import_jsx_dev_runtime2 = __toESM(require_jsx_dev_runtime());
 if (!window.$RefreshReg$ || !window.$RefreshSig$ || !window.$RefreshRuntime$) {
   console.warn("remix:hmr: React Fast Refresh only works when the Remix compiler is running in development mode.");
 } else {
@@ -229,7 +229,7 @@ window.$RefreshReg$ = prevRefreshReg;
 window.$RefreshSig$ = prevRefreshSig;
 
 // app/components/BlockTimeChart.tsx
-var import_jsx_dev_runtime3 = __toESM(require_jsx_dev_runtime(), 1);
+var import_jsx_dev_runtime3 = __toESM(require_jsx_dev_runtime());
 if (!window.$RefreshReg$ || !window.$RefreshSig$ || !window.$RefreshRuntime$) {
   console.warn("remix:hmr: React Fast Refresh only works when the Remix compiler is running in development mode.");
 } else {
@@ -327,7 +327,7 @@ window.$RefreshReg$ = prevRefreshReg;
 window.$RefreshSig$ = prevRefreshSig;
 
 // app/components/NetworkStatus.tsx
-var import_jsx_dev_runtime4 = __toESM(require_jsx_dev_runtime(), 1);
+var import_jsx_dev_runtime4 = __toESM(require_jsx_dev_runtime());
 if (!window.$RefreshReg$ || !window.$RefreshSig$ || !window.$RefreshRuntime$) {
   console.warn("remix:hmr: React Fast Refresh only works when the Remix compiler is running in development mode.");
 } else {
@@ -524,7 +524,7 @@ window.$RefreshReg$ = prevRefreshReg;
 window.$RefreshSig$ = prevRefreshSig;
 
 // app/components/Dashboard.tsx
-var import_jsx_dev_runtime5 = __toESM(require_jsx_dev_runtime(), 1);
+var import_jsx_dev_runtime5 = __toESM(require_jsx_dev_runtime());
 if (!window.$RefreshReg$ || !window.$RefreshSig$ || !window.$RefreshRuntime$) {
   console.warn("remix:hmr: React Fast Refresh only works when the Remix compiler is running in development mode.");
 } else {
@@ -895,8 +895,8 @@ window.$RefreshReg$ = prevRefreshReg;
 window.$RefreshSig$ = prevRefreshSig;
 
 // app/routes/_index.tsx
-var import_react3 = __toESM(require_react(), 1);
-var import_jsx_dev_runtime6 = __toESM(require_jsx_dev_runtime(), 1);
+var import_react3 = __toESM(require_react());
+var import_jsx_dev_runtime6 = __toESM(require_jsx_dev_runtime());
 if (!window.$RefreshReg$ || !window.$RefreshSig$ || !window.$RefreshRuntime$) {
   console.warn("remix:hmr: React Fast Refresh only works when the Remix compiler is running in development mode.");
 } else {
@@ -951,4 +951,4 @@ window.$RefreshSig$ = prevRefreshSig;
 export {
   Index as default
 };
-//# sourceMappingURL=/build/routes/_index-MGXGEFFN.js.map
+//# sourceMappingURL=/build/routes/_index-TJELIM3W.js.map

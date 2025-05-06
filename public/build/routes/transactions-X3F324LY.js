@@ -30,10 +30,10 @@ import {
 } from "/build/_shared/chunk-EBWBTRXC.js";
 
 // app/routes/transactions.tsx
-var import_node = __toESM(require_node(), 1);
-var import_monad = __toESM(require_monad(), 1);
-var import_react2 = __toESM(require_react(), 1);
-var import_jsx_dev_runtime = __toESM(require_jsx_dev_runtime(), 1);
+var import_node = __toESM(require_node());
+var import_monad = __toESM(require_monad());
+var import_react2 = __toESM(require_react());
+var import_jsx_dev_runtime = __toESM(require_jsx_dev_runtime());
 if (!window.$RefreshReg$ || !window.$RefreshSig$ || !window.$RefreshRuntime$) {
   console.warn("remix:hmr: React Fast Refresh only works when the Remix compiler is running in development mode.");
 } else {
@@ -243,4 +243,4 @@ window.$RefreshSig$ = prevRefreshSig;
 export {
   Transactions as default
 };
-//# sourceMappingURL=/build/routes/transactions-PKZSPA3D.js.map
+//# sourceMappingURL=/build/routes/transactions-X3F324LY.js.map
